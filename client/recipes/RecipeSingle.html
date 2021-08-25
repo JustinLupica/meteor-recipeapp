@@ -1,0 +1,22 @@
+<template name="RecipeSingle">
+    <div class="menu-item">
+    <h1>{{recipe.name}}</h1>
+    <div class="single-recipe-ingredients">
+        <h2>Ingredients:</h2>
+            {{#each recipe.ingredients}}
+                <li>{{name}} - {{amount}}</li>
+            {{/each}}
+    </div>
+    <div class="single-recipe-instructions">
+        <h2>Instructions:</h2>
+        <ul>
+            {{#each recipe.instructions}}
+            <li>
+                <input type="checkbox" checked="{{isChecked}}" class="toggle-checked"/>
+                <span>{{step}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+</template>
