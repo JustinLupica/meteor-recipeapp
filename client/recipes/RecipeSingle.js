@@ -14,9 +14,9 @@ Template.RecipeSingle.helpers({
     }
 })
 
-Template.RecipeSingle.events({
-    'click .toggle-checked'() {
-        //Set the checked property to the opposite of it's current value
-        
-    }
-})
+// Template.RecipeSingle.events({
+//     'click .toggle-checked'() {
+//         //Set the checked property to the opposite of it's current value
+//        Meteor.call('toggleCheckedItem', this.name, this.isChecked)
+//     }
+// })

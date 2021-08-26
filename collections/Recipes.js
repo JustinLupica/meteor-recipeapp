@@ -14,10 +14,7 @@ Ingredient = new SimpleSchema({
         type: String,
     },
     amount: {
-        type: String
-    },
-    test: {
-        type: String
+        type: String,
     },
     isChecked: {
         type: Boolean,
@@ -91,13 +88,22 @@ Meteor.methods({
     deleteRecipe: function(id) {
         Recipes.remove(id);
     },
-    toggleCheckedItem: function(id, currentState) {
-        Recipes.ingredients.update(id, {
-            $set: {
-                isChecked: !currentState
-            }
-        })
-    }
-})
+    // toggleCheckedItem: function(name) {
+    //     console.log('method', name)
+    //     Ingredient.update(name, {
+    //         $set: {
+    //             isChecked: !this.isChecked
+    //         }
+    //     })
+    // },
+    // toggleCheckedItem: function(name, currentState) {
+    //     console.log(name)
+    //     console.log("isChecked", currentState)
+    //     Recipes.update({ingredients.name: name}, {
+    //         $set: {'ingredients.isChecked' : !currentState}
+    //     })
+    // }
+
+});
 
 Recipes.attachSchema( RecipeSchema );

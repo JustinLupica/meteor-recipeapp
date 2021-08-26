@@ -3,9 +3,14 @@
     <h1>{{recipe.name}}</h1>
     <div class="single-recipe-ingredients">
         <h2>Ingredients:</h2>
+        <ul>
             {{#each recipe.ingredients}}
-                <li>{{name}} - {{amount}}</li>
+                <li>
+                    <input type="checkbox" checked="{{isChecked}}" class="toggle-checked"/>
+                    <span>{{name}} - {{amount}}</span>
+                </li>
             {{/each}}
+        </ul>
     </div>
     <div class="single-recipe-instructions">
         <h2>Instructions:</h2>
@@ -20,3 +25,5 @@
     </div>
 </div>
 </template>
+
+
